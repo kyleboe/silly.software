@@ -1,5 +1,27 @@
+$primary: #155799;
+$secondary: #159957;
+
+a {
+  color: #FFFFFF;
+}
+a:hover {
+  text-decoration: none;
+}
+
 nav {
+  max-width: 64rem;
+  padding: 2rem 6rem;
+  margin: 0 auto;
+  font-size: 1.1rem;
   a {
-    color: red !important;
+    padding: 1rem;
+    background-color: $primary;
+    border-right: 1px solid white;
+    &.current {
+      background-color: $secondary;
+    }
+    &:hover {
+      opacity: 0.8;
+    }
   }
 }

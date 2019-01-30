@@ -22,6 +22,8 @@
   <meta name="theme-color" content="#157878">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-6jHF7Z3XI3fF4XZixAuSu0gGKrXwoX/w3uFPxC56OtjChio7wtTGJWRW53Nhx6Ev"
+  crossorigin="anonymous">
 </head>
 
 <body>
@@ -36,8 +38,11 @@
   </header>
 
 <nav>
+<a {% if page.url=='/' %}class="current" {% endif %} href='/'>
+    <i class='fal fa-home'></i>
+  </a>
   {% for item in site.data.nav %}
-<a href={{ item.url }} {% if page.url==item.link %}class="current" {% endif %}>{{ item.title }}</a>
+<a href={{ item.url }} {% if page.url==item.url %}class="current" {% endif %}>{{ item.title }}</a>
   {% endfor %}
 </nav>
 
